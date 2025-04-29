@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor [Your Last Name]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Custom color scheme */
+        :root {
+            --primary-color: #4A6D77;
+            --primary: #4682B4;
+            --blue: #4682B4;
+            --secondary-color: #6c757d;
+            --accent-color: #28a745;
+            --link-color: #8FB3AA;
+        }
+
+        body {
+            font-family: sans-serif;
+            color: #333;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+	img {
+		border-radius:20px;
+	}
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar.navbar-dark {
+            background-color: var(--primary-color) !important;
+        }
+
+	.navbar-dark.navbar-brand img {
+	   border: 0px;
+	}
+	
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #f8f9fa !important;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .project-card {
+            border: 1.5px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            background-color: #F5F8F6;
+	    font-family: "Georgia", sans-serif;
+        }
+
+        .project-card h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+	    font-size: 1.1em;
+        }
+	.project-card p {
+	    font-size: 0.9em;
+	}
+
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1rem;
+	    font-size: 1.4em;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+            border-top: 1px solid #dee2e6;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<div class="container">
+        <a class="navbar-brand" border="none" href="#"><img src="torch.png" height=40></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#publications">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#teaching">Teaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#research">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#open-source">Open Source</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+	</div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row align-items-center mb-3">
+            <div class="col-md-3">
+                <img src="me.jpg" alt="Profile Picture" height=200px border-radius=10px>
+            </div>
+            <div class="col-md-9">
+                <h1>Jinyang Li</h1>
+                <p class="lead">Professor of Computer Science</p>
+                <p><a href="https://cs.nyu.edu">Department of Computer Science</a><br>
+		<a href="https://cims.nyu.edu">Courant Institute of Mathematical Sciences</a><br>
+                New York University</p>
+                <p>60 5th Ave, New York, NY</p>
+                <!-- <p><i class="fas fa-link"></i> <a href="[your personal/lab website URL]" target="_blank">[Your Personal/Lab Website]</a></p> -->
+            </div>
+        </div>
+
+	<section id="research" class="mb-5">
+            <h2>Research Interests</h2>
+            <p>Machine learning systems, distributed and parallel computing, fault tolerant systems</p>
+        </section>
+
+        <section id="open-source" class="mb-5">
+            <h2>Select Open Source Projects</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h4>Grendel: Distributed 3D Gaussian Splatting</h4>
+                        <p>A distributed training system that enables unprecedented scaling of Guassian Splatting and other point-based rendering algorithms for 3D reconstruction.</p>
+			<span> Github <a href="https://github.com/dmlc/dgl"><i class="bi bi-github"></i></a> </span>
+ 			<span style="margin-left:20px;"> ICLR'25 Oral <a href="https://github.com/dmlc/dgl"><i class="bi bi-file-earmark"></i></a></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card row align-items-center">
+                        <h4><img src="dgl-logo.png" height=45></h4>
+                        <p>A fast and memory-efficient message-passing programming framework for training Graph Neural Networks.</p>
+			<span>Github <a href="https://github.com/dmlc/dgl"><i class="bi bi-github"></i></a> </span>
+ 			<span style="margin-left:20px;">Paper <a href="https://github.com/dmlc/dgl"><i class="bi bi-file-earmark"></i></a></span>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section id="publications" class="mb-5">
+            <h2>Recent Publications <span style="margin-left:10px; font-size:0.7em;">All <a href="pub/"><i class="bi bi-link"></i></a></span></h2>
+            <ul>
+                <li>[Year] - [Publication Title] - [Journal/Conference]</li>
+                <li>[Year] - [Another Publication Title] - [Journal/Conference]</li>
+		<li><a href="pub/">More...</a></li>
+            </ul>
+        </section>
+
+	<section id="students" class="mb-5">
+            <h2>Students</h2>
+           <p>I am co-advising many wonderful Ph.D. students with Prof. Panda</p>
+            <ul>
+                <li>Ding Ding</li>
+                <li>Haitian Jiang</li>
+                <li>Jinkun Lin</li>
+                <li>David Pissara</li>
+                <li>Anqi Zhang</li>
+                <li>Hexu Zhao</li>
+            </ul>
+        </section>
+
+        <section id="teaching" class="mb-5">
+            <h2>Teaching</h2>
+            <ul>
+                <li>[Semester, Year] - [Course Name] ([Course Number])</li>
+                <li>[Semester, Year] - [Another Course Name] ([Course Number])</li>
+            </ul>
+        </section>
+
+        
+        <section id="contact" class="mb-5">
+            <h2>Contact</h2>
+            <p>Office: [Your Office Location]</p>
+            <p>Email: <a href="mailto:[your.email@nyu.edu]">[your.email@nyu.edu]</a></p>
+        </section>
+
+        <footer class="mt-5 text-center">
+            <p>&copy; [2025] [Jinyang Li]. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
