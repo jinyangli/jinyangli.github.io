@@ -1,0 +1,86 @@
+/* Custom color scheme */
+:root {
+    --primary-color: #4A6D77;
+    --primary: #4682B4;
+    --blue: #4682B4;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    --link-color: #8FB3AA;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+img {
+	border-radius:20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar.navbar-dark {
+    background-color: var(--primary-color) !important;
+}
+
+.navbar-dark.navbar-brand img {
+   border: 0px;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #f8f9fa !important;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.project-card {
+    border: 1.5px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #F5F8F6;
+    font-family: "Georgia", sans-serif;
+}
+
+.project-card h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1em;
+}
+.project-card p {
+    font-size: 0.9em;
+}
+
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.4em;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    border-top: 1px solid #dee2e6;
+    color: var(--secondary-color);
+}
+
